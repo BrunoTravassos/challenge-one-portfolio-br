@@ -7,18 +7,28 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --margin-default: 0 60px 60px;
+    --padding-default: 0 60px;
+    --margin-def-mb: 0 10px 20px;
+    --padding-def-mb: 0 10px;
 }
 
 body {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     background-color: var(--cor-de-fundo) ;
     font-family: 'Raleway';
+    width: 100%;
     margin: 0;
     padding: 0;
     line-height: 1;
 }
 ol, ul,li {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    /* padding: 8px; */
 }
 a{
     text-decoration: none;
@@ -41,90 +51,495 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sessão Menu*/
 
 section.menu{
+    margin: var(--margin-default);
+    padding: var(--padding-default);
+    color: red;
+    display: flex;
+    height:108px;
+    align-items: center;
+    justify-content: space-between;
+}
 
+section.menu header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+section.menu nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 15px;
+}
+/* section.menu nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+section.menu nav li {
+    padding: 10px;
 }
 
 /*Sessão Title*/
 
 section.title{
+    display: flex;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
+    /* height: 480px; */
 
 }
+
+section .title__div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width:80%
+}
+section .title__profile {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+section .title__container {
+    display: flex;
+    flex-direction: column;
+}
+section .title__network {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 20px 0;
+}
+
+
 
 /*Sessão About*/
 
 section.about{
+    display: flex;
+    background-color: #4fbde922;
+    height: 350px;
+    margin: 0 0 60px;
+}
+section .about__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 60px;
+    padding: var(--padding-default);
+}
 
+section .about__title {
+    font-size: 26px;
+}
+
+section .about__paragraph {
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* Sessão Habilidades*/
+.icons_grid_box {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+section.skills {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-default);
+    margin: var(--margin-default);
+    gap: 16px;
+}
+section .skills__title {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .skills__line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section .skills__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 192px;
+    height: 192px;
+    border-radius: 10px;
+    background-color: #e9e9e9b5;
+    box-shadow: #0000003d 0px 3px 8px;
+    transition: background-color 0.3s ease;
+}
+section .skills__box:hover {
+    background-color:#4fbde922; 
 }
 
 /*Sessão Hobbies*/
 
-section.hobbies{
-    
+section.hobbies {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-default);
+    margin: var(--margin-default);
+    gap: 16px;
+}
+section .hobbies__title {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .hobbies__line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section .hobbies__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 192px;
+    height: 192px;
+    border-radius: 10px;
+    background-color: #e9e9e9b5;
+    box-shadow: #0000003d 0px 3px 8px;
+    transition: background-color 0.3s ease;
+}
+section .hobbies__box:hover {
+    background-color:#4fbde922; 
 }
 
 /* Experiência Acadêmica*/
 
-section.academic{
+section.academic {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* display: flex; */
+    height: 350px;
+    background-color: #4fbde922;
+    margin: 0 0 60px;
+}
+
+section .academic__container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--padding-default);
+    margin: 0 60px;
 
 }
 
+section .academic__courses__box {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px;
+    margin-left: 3%;
+
+}
+
+
+section .academic__title {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .academic__courses {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+section .academic__courses__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+section .academic__courses__item__img {
+    width: 200px;
+    height: 200px;
+}
+
+
 /* experiência*/
 
-section.experience{
-
+section.experience {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
+    
 }
 
 /*Contato*/
 
-section.formcontato{
-
+section.formcontato {
+    display: flex;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
 }
 
 /*footeer*/
 
-section.footer{
-   
+section.footer {
+    color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 15vh;
+    color: #2e2e2e;
+    background-color: #2e2e2e0e;
+    font-weight: 500;
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
 utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
-/* Menu */
+    section.menu {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
 
-/*title*/
+    section.menu .menu__list {
+        display: none;
+    }
 
-/*Skills*/
+    section.title {
+        margin: 0 20px 40px;
+        padding: 0 20px;
+        height: fit-content;
+    }
 
-/*Hobbies*/
+    section .title__bio {
+        font-size: 24pt;
+    }
 
-/*Experiências acadêmicas*/
+    section .title__profile {
+        width: 200px;
+        height: 200px;
+    }
 
-/*Expeirência profissional*/
+    section .title__subsection {
+        line-height: normal;
+        font-size: 12pt;
+        width: 100%;
+    }
+
+    section.about {
+        height: fit-content;
+        margin: 0;
+    }
+
+    section .about__container {
+        margin: 0 20px 30px;
+        padding: 0 20px;
+    }
+
+    section.skills {
+        margin: 0 20px 30px;
+        padding: 0 20px;
+    }
+
+    section .skills__line {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    section .skills__box {
+        width: calc((100% - 3rem) / 3);
+        max-width: calc(33.33% - 1rem);
+        margin-bottom: 1rem;
+    }
+
+    section.hobbies {
+        margin: 0 20px 40px;
+        padding: 0 20px;
+    }
+
+    section .hobbies__line {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    section .hobbies__box {
+        width: calc((100% - 3rem) / 3);
+        max-width: calc(33.33% - 1rem);
+        margin-bottom: 1rem;
+    }
+
+    section.academic {
+        height: fit-content;
+    }
+
+    section .academic__container {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+
+    footer.footer {
+        height: fit-content !important;
+    }
+
+    footer .footer__rodape {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
 
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 767px) {
 
-/*Menu*/
+    section.menu {
+        margin: 0 10px 30px;
+        padding: 0 10px;
+    }
 
-/*Titulo*/
+    section.menu .menu__list {
+        display: none;
+    }
 
-/*Sessão sobre*/
+    section.title {
+        margin: 0 10px 30px;
+        padding: var(--padding-def-mb);
+        height: fit-content;
+    }
 
-/*Skills*/
+    section .title__div {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
+    section .title__bio {
+        font-size: 8pt;
+        text-align: center;
+    }
 
-/*Experiência Profissional*/
+    section .title__container {
+        width: 100%;
+    }
 
- /*Contato*/
+    section .title__profile {
+        width: 100px;
+        height: 100px;
+    }
 
-/*Footer*/
+    section .title__subsection {
+        text-align: justify;
+        line-height: normal;
+        width: 100%;
+        font-size: 10pt;
+    }
+
+    section .title__network {
+        font-size: 9pt;
+        width: 100%;
+    }
+
+    section.about {
+        height: fit-content;
+        margin: 0;
+    }
+
+    section .about__container {
+        margin: var(--margin-def-mb);
+        padding: var(--padding-def-mb);
+    }
+
+    section .about__title {
+        text-align: center;
+    }
+
+    section .about__paragraph {
+        font-size: 12pt;
+    }
+
+    section.skills {
+        margin: var(--margin-def-mb);
+        padding: var(--padding-def-mb);
+    }
+
+    section .skills__line {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    section .skills__box {
+        height: 8rem;
+        width: calc((100% - 2rem) / 2);
+        max-width: calc(50% - 1rem);
+        margin-bottom: 1rem;
+    }
+
+
+    section.hobbies {
+        margin: 0 10px 30px;
+        padding: var(--padding-def-mb);
+    }
+
+    section .hobbies__line {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    section .hobbies__box {
+        height: 8rem;
+        width: calc((100% - 2rem) / 2);
+        max-width: calc(50% - 1rem);
+        margin-bottom: 1rem;
+    }
+
+    section.academic {
+        height: fit-content;
+    }
+
+    section .academic__container {
+        margin: 0 10px;
+        padding: var(--padding-def-mb);
+    }
+
+    footer.footer {
+        height: fit-content !important;
+    }
+
+    footer .footer__rodape {
+        margin: 0;
+        padding: 0;
+    }
 
 }
